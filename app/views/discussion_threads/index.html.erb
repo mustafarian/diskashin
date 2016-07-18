@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Discussion Threads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discussion_threads.each do |discussion_thread| %>
+      <tr>
+        <td><%= discussion_thread.title %></td>
+        <td><%= discussion_thread.body %></td>
+        <td><%= link_to 'Show', discussion_thread %></td>
+        <td><%= link_to 'Edit', edit_discussion_thread_path(discussion_thread) %></td>
+        <td><%= link_to 'Destroy', discussion_thread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discussion Thread', new_discussion_thread_path %>

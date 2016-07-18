@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @discussion_thread.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @discussion_thread.body %>
+</p>
+
+<%= link_to 'Edit', edit_discussion_thread_path(@discussion_thread) %> |
+<%= link_to 'Back', discussion_threads_path %>

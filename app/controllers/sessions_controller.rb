@@ -7,6 +7,13 @@ class SessionsController < ApplicationController
     user = User.find_by(username: login_params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+
+      session[:roles] = []
+
+      if user.is_admin
+        session[:roles].append('admin')
+      end
+
       redirect_to root_url, notice: "Log in successful!"
     else
       flash.now.alert = "Invalid username or password"

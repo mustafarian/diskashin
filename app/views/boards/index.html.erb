@@ -26,6 +26,6 @@
 </div>
 <br>
 
-<% if current_user %>
+<% if has_role? 'admin' %>
     <%= link_to 'New Board', new_board_path, class: "btn btn-default" %>
 <% end %>

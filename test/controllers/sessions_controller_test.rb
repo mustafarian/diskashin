@@ -2,6 +2,8 @@ require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
 
+  include SessionsHelper
+
   test "should get login page" do
     get :new
     assert_response :success
@@ -14,6 +16,8 @@ class SessionsControllerTest < ActionController::TestCase
     }
     post :create, params: params
     assert_redirected_to root_url
+
+    assert(has_role?(:admin), 'Expected role not found.')
   end
 
   test "failed login" do

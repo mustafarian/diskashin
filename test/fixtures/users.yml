@@ -9,6 +9,7 @@ user1:
  username: smakawi
  email_address: makawi@gmail.com
  password_digest: <%= BCrypt::Password.create "password" %>
+ is_admin: true
 user2:
   name: Sabah Fakhri
   username: sfakhri

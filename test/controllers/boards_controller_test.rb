@@ -23,6 +23,18 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to board_url(Board.last)
   end
 
+  test "should create sub-board" do
+
+    assert_difference('Board.count') do
+      post boards_url, params: { board: { description: "Child board", title: "sub-board", parent_id: @board.id } }
+    end
+
+    sub_board = Board.find_by(:title => "sub-board")
+    assert(sub_board.parent, "Parent board not set.")
+    assert(sub_board.parent.id == @board.id, "Unexpected parent board id.")
+    assert_redirected_to edit_board_url(@board)
+  end
+
   test "should show board" do
     get board_url(@board)
     assert_response :success

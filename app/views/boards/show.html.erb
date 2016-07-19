@@ -1,12 +1,9 @@
 <p>
-  <strong>Title:</strong>
-  <%= @board.title %>
+  <h2><%= @board.title %><br><small><%= @board.description %></small></h2>
 </p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @board.description %>
-</p>
+<br>
+<h3>Sub-Boards</h3>
+<%= render @board.sub_boards %>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>

@@ -1,0 +1,14 @@
+<div class="row">
+  <span class="col-md-4">
+    <%= link_to board.title, board %><br>
+  </span>
+  <span class="col-md-4">
+    <%= board.description %>
+  </span>
+  <% if has_role? 'admin' %>
+      <span class="col-md-4">
+        <%= link_to 'Edit', edit_board_path(board) %>
+        <%= link_to 'Delete', board, method: :delete, data: {confirm: "Are you sure?"} %>
+      </span>
+  <% end %>
+</div>

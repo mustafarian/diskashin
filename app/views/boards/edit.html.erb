@@ -2,5 +2,14 @@
 
 <%= render 'form', board: @board %>
 
+<h3> Sub-Boards</h3>
+<% if !@board.parent %>
+    <%= render "board_list", boards: @board.sub_boards %>
+    <br>
+    <% if has_role? 'admin' %>
+        <%= render 'sub_board_form',  board: @board %>
+    <% end %>
+<% end %>
+<br>
 <%= link_to 'Show', @board %> |
 <%= link_to 'Back', boards_path %>

@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.all
+    @boards = Board.where(parent_id: nil)
   end
 
   # GET /boards/1
@@ -24,15 +24,29 @@ class BoardsController < ApplicationController
   # POST /boards
   # POST /boards.json
   def create
-    @board = Board.new(board_params)
+    new_board = Board.new(board_params)
+
+    if board_params[:parent_id]
+      parent = Board.find(board_params[:parent_id])
+      @board = parent
+    else
+      @board = new_board
+    end
 
     respond_to do |format|
-      if @board.save
-        format.html { redirect_to @board, notice: 'Board was successfully created.' }
-        format.json { render :show, status: :created, location: @board }
+      if new_board.save
+        if parent
+          parent.sub_boards << new_board
+          parent.save
+          format.html { redirect_to edit_board_path(@board), notice: 'Board was successfully created.' }
+          format.json { render :show, status: :updated, location: @board }
+        else
+          format.html { redirect_to @board, notice: 'Board was successfully created.' }
+          format.json { render :show, status: :created, location: @board }
+        end
       else
         format.html { render :new }
-        format.json { render json: @board.errors, status: :unprocessable_entity }
+        format.json { render json: new_board.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -62,13 +76,13 @@ class BoardsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_board
-      @board = Board.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_board
+    @board = Board.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def board_params
-      params.require(:board).permit(:title, :description)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def board_params
+    params.require(:board).permit(:title, :description, :parent_id)
+  end
 end

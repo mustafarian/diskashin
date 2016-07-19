@@ -17,7 +17,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, params: params
     assert_redirected_to root_url
 
-    assert(has_role?(:admin), 'Expected role not found.')
+    assert(has_role?('admin'), 'Expected role not found.')
   end
 
   test "failed login" do

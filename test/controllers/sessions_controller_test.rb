@@ -11,8 +11,8 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "successful login" do
     params = {
-        username: "smakawi",
-        password: "password"
+        username: "admin",
+        password: "admin"
     }
     post :create, params: params
     assert_redirected_to root_url
@@ -22,7 +22,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "failed login" do
     params = {
-        username: "smakawi",
+        username: "admin",
         password: "password_wrong"
     }
     post :create, params: params

@@ -3,7 +3,9 @@
 one:
   title: MyString
   body: MyText
+  board_id: 2
 
 two:
   title: MyString
   body: MyText
+  board_id: 2

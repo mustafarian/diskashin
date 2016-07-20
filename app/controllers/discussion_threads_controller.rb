@@ -26,7 +26,6 @@ class DiscussionThreadsController < ApplicationController
   # POST /discussion_threads
   # POST /discussion_threads.json
   def create
-
     board = Board.find(discussion_thread_params[:board_id])
 
     @discussion_thread = DiscussionThread.new(discussion_thread_params)
@@ -47,8 +46,8 @@ class DiscussionThreadsController < ApplicationController
   # PATCH/PUT /discussion_threads/1.json
   def update
     respond_to do |format|
-      if @discussion_thread.update(discussion_thread_params)
-        format.html { redirect_to @discussion_thread, notice: 'Discussion thread was successfully updated.' }
+      if @discussion_thread.update(discussion_thread_update_params)
+        format.html { redirect_to thread_url(@discussion_thread), notice: 'Discussion thread was successfully updated.' }
         format.json { render :show, status: :ok, location: @discussion_thread }
       else
         format.html { render :edit }
@@ -60,9 +59,11 @@ class DiscussionThreadsController < ApplicationController
   # DELETE /discussion_threads/1
   # DELETE /discussion_threads/1.json
   def destroy
+    board = @discussion_thread.board
+
     @discussion_thread.destroy
     respond_to do |format|
-      format.html { redirect_to discussion_threads_url, notice: 'Discussion thread was successfully destroyed.' }
+      format.html { redirect_to board_url(board), notice: 'Discussion thread was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -76,5 +77,9 @@ class DiscussionThreadsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def discussion_thread_params
     params.require(:discussion_thread).permit(:title, :body, :board_id)
+  end
+
+  def discussion_thread_update_params
+    params.require(:discussion_thread).permit(:title, :body)
   end
 end

@@ -1,6 +1,7 @@
-<h1>Editing Discussion Thread</h1>
+<div class="page-header">
+  <h1>Editing Thread</h1>
+</div>
 
 <%= render 'form', discussion_thread: @discussion_thread %>
 
-<%= link_to 'Show', @discussion_thread %> |
-<%= link_to 'Back', discussion_threads_path %>
+<%= link_to 'Back', board_path(@discussion_thread.board.id) %>

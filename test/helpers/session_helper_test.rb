@@ -5,7 +5,7 @@ class SessionHelperTest < ActionView::TestCase
   include SessionsHelper
 
   test 'check role present' do
-    user = users(:user1)
+    user = users(:user_1)
     session[:user_id] = user.id
     session[:roles] = [:admin,:user]
 

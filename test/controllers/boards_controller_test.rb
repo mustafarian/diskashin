@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BoardsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @board = boards(:one)
+    @board = boards(:board_2)
   end
 
   test "should get index" do

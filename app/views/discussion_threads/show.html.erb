@@ -10,5 +10,5 @@
   <%= @discussion_thread.body %>
 </p>
 
-<%= link_to 'Edit', edit_discussion_thread_path(@discussion_thread) %> |
-<%= link_to 'Back', discussion_threads_path %>
+<%= link_to 'Edit', edit_thread_path(@discussion_thread) %> |
+<%= link_to 'Back', board_path(@discussion_thread.board) %>

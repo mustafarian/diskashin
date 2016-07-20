@@ -14,6 +14,8 @@ class DiscussionThreadsController < ApplicationController
 
   # GET /discussion_threads/new
   def new
+    @board_id = params[:board_id]
+
     @discussion_thread = DiscussionThread.new
   end
 
@@ -24,11 +26,15 @@ class DiscussionThreadsController < ApplicationController
   # POST /discussion_threads
   # POST /discussion_threads.json
   def create
+
+    board = Board.find(discussion_thread_params[:board_id])
+
     @discussion_thread = DiscussionThread.new(discussion_thread_params)
 
     respond_to do |format|
       if @discussion_thread.save
-        format.html { redirect_to @discussion_thread, notice: 'Discussion thread was successfully created.' }
+        format.html { redirect_to thread_url(@discussion_thread),
+                                  notice: 'Discussion thread was successfully created.' }
         format.json { render :show, status: :created, location: @discussion_thread }
       else
         format.html { render :new }
@@ -62,13 +68,13 @@ class DiscussionThreadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_discussion_thread
-      @discussion_thread = DiscussionThread.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_discussion_thread
+    @discussion_thread = DiscussionThread.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def discussion_thread_params
-      params.require(:discussion_thread).permit(:title, :body)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def discussion_thread_params
+    params.require(:discussion_thread).permit(:title, :body, :board_id)
+  end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :discussion_threads
+  resources :discussion_threads, :as => 'threads'
   resources :boards do
     resources :boards
   end

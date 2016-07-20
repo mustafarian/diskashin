@@ -8,5 +8,10 @@
     <h3>Sub-Boards</h3>
     <%= render 'board_list', boards: @board.sub_boards %>
     <br>
+<% else %>
+    <%= link_to 'New Thread', new_thread_path(:board_id => @board.id), :class => "btn btn-primary" %>
+    <br><br>
+    <%= render 'discussion_threads/thread_list', threads: @board.threads %>
 <% end %>
+<br>
 <%= link_to 'Back', boards_path %>

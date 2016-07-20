@@ -1,17 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-user1:
- name: Sayid Makawi
- username: smakawi
- email_address: makawi@gmail.com
- password_digest: <%= BCrypt::Password.create "password" %>
- is_admin: true
-user2:
-  name: Sabah Fakhri
-  username: sfakhri
-  email_address: sabah@email.com
-  password_digest: <%= BCrypt::Password.create "password" %>
+---
+user_1:
+  id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-07-19 09:35:46.671326000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-07-19 09:40:00.224333000 Z
+    zone: *2
+    time: *3
+  username: admin
+  email_address: admin@yahoo.com
+  password_digest: "$2a$10$ok8f7gCGD8ec6bgqWhijuuPkuxtpD1J5tJmHrPqKs7FSRYFSWG33G"
+  name: Mr. Admin
+  is_admin: true

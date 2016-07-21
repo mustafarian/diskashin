@@ -1,14 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <h1><%= @discussion_thread.title %></h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @discussion_thread.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @discussion_thread.body %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= @discussion_thread.author.name %><br>
+    <small><strong>at: </strong><%= @discussion_thread.created_at.strftime('%d-%m-%Y, %H:%M %P')%></small>
+  </div>
+  <div class="panel-body"><%= @discussion_thread.body %></div>
+</div>
 
-<%= link_to 'Edit', edit_thread_path(@discussion_thread) %> |
+<%= link_to 'Edit', edit_discussion_thread_path(@discussion_thread) %> |
 <%= link_to 'Back', board_path(@discussion_thread.board) %>

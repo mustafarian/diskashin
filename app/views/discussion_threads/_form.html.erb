@@ -1,5 +1,5 @@
 <div class="panel">
-  <%= form_for(@discussion_thread, url: threads_path, :html => {:class => 'form-horizontal', :role => "form"}) do |f| %>
+  <%= form_for(@discussion_thread, :html => {:class => 'form-horizontal', :role => "form"}) do |f| %>
       <% if discussion_thread.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(discussion_thread.errors.count, "error") %> prohibited this discussion_thread from being
@@ -23,14 +23,14 @@
       <div class="form-group">
         <%= f.label :body, class: 'control-label col-sm-2' %>
         <div class="col-sm-10">
-          <%= f.text_area :body, class: "form-control" %>
+          <%= f.text_area :body, rows: 10, class: "form-control" %>
         </div>
       </div>
 
       <%= f.hidden_field :board_id, :value => @board_id %>
 
       <div class="actions">
-        <%= f.submit "Create Thread", class: "btn btn-primary" %>
+        <%= f.submit class: "btn btn-primary" %>
       </div>
   <% end %>
 </div>

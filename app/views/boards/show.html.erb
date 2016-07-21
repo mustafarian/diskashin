@@ -9,7 +9,7 @@
     <%= render 'board_list', boards: @board.sub_boards %>
     <br>
 <% else %>
-    <%= link_to 'New Thread', new_thread_path(:board_id => @board.id), :class => "btn btn-primary" %>
+    <%= link_to 'New Thread', new_discussion_thread_path(:board_id => @board.id), :class => "btn btn-primary" %>
     <br><br>
     <%= render 'discussion_threads/thread_list', threads: @board.threads %>
 <% end %>

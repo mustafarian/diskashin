@@ -1,5 +1,6 @@
 class DiscussionThreadsController < ApplicationController
   before_action :set_discussion_thread, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   # GET /discussion_threads
   # GET /discussion_threads.json
@@ -15,7 +16,6 @@ class DiscussionThreadsController < ApplicationController
   # GET /discussion_threads/new
   def new
     @board_id = params[:board_id]
-
     @discussion_thread = DiscussionThread.new
   end
 
@@ -29,13 +29,14 @@ class DiscussionThreadsController < ApplicationController
     board = Board.find(discussion_thread_params[:board_id])
 
     @discussion_thread = DiscussionThread.new(discussion_thread_params)
-
+    @discussion_thread.author = current_user
     respond_to do |format|
       if @discussion_thread.save
-        format.html { redirect_to thread_url(@discussion_thread),
+        format.html { redirect_to discussion_thread_url(@discussion_thread),
                                   notice: 'Discussion thread was successfully created.' }
         format.json { render :show, status: :created, location: @discussion_thread }
       else
+        @board_id = board.id
         format.html { render :new }
         format.json { render json: @discussion_thread.errors, status: :unprocessable_entity }
       end
@@ -47,7 +48,8 @@ class DiscussionThreadsController < ApplicationController
   def update
     respond_to do |format|
       if @discussion_thread.update(discussion_thread_update_params)
-        format.html { redirect_to thread_url(@discussion_thread), notice: 'Discussion thread was successfully updated.' }
+        format.html { redirect_to discussion_thread_url(@discussion_thread),
+                                  notice: 'Discussion thread was successfully updated.' }
         format.json { render :show, status: :ok, location: @discussion_thread }
       else
         format.html { render :edit }

@@ -9,8 +9,8 @@
   <% threads.each do |thread| %>
       <div class="list-group-item row">
         <span class="col-md-1 fa fa-commenting fa-fw fa-3x" aria-hidden="true"></span>
-        <span class="col-md-6"><%= link_to "#{thread.title}", thread_path(thread) %><br>
-          <small>Started By:</small>
+        <span class="col-md-6"><%= link_to "#{thread.title}", discussion_thread_path(thread) %><br>
+          <small>Started By: <%= thread.author.name %></small>
         </span>
         <span class="col-md-2 text-right">Replies: <br>Views:</span>
         <span class="col-md-2"></span>

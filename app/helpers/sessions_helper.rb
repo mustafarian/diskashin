@@ -14,6 +14,6 @@ module SessionsHelper
       return false
     end
 
-    return session[:roles].include?(role)
+    return (session[:roles] != nil and session[:roles].include?(role))
   end
 end

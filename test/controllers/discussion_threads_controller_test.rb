@@ -33,7 +33,7 @@ class DiscussionThreadsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should show discussion_thread and recourd view" do
+  test "should show discussion_thread and record view" do
     params = {discussion_thread: {body: @discussion_thread.body, title: @discussion_thread.title, board_id: @board.id}}
 
     assert_difference('ThreadView.count') do

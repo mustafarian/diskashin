@@ -1,9 +1,9 @@
 <div class="list-group">
   <div class="list-group-item row">
     <span class="col-md-1"></span>
-    <span class="col-md-6 text-center"><strong>Title / Thread Starter</strong></span>
-    <span class="col-md-2 text-center"><strong>Replies / Views</strong></span>
-    <span class="col-md-2 text-center"><strong>Last Post By</strong></span>
+    <span class="col-md-6 text-left"><strong>Title / Thread Starter</strong></span>
+    <span class="col-md-2 text-right"><strong>Replies / Views</strong></span>
+    <span class="col-md-2 pull-right"><strong>Last Post By</strong></span>
   </div>
 
   <% threads.each do |thread| %>
@@ -12,9 +12,16 @@
         <span class="col-md-6"><%= link_to "#{thread.title}", discussion_thread_path(thread) %><br>
           <small>Started By: <%= thread.author.name %></small>
         </span>
-        <span class="col-md-2 text-right">Replies: <%= thread.replies.count %>
-          <br>Views: <%= thread.views.count %></span>
-        <span class="col-md-2"></span>
+        <span class="col-md-2 text-right">
+          <div class="text-righ">Replies: <%= thread.replies.count %> </div>
+          <div class="text-right">Views: <%= thread.views.count %></div>
+        </span>
+        <span class="col-md-2 pull-right">
+          <% if thread.replies.count > 0 %>
+            <%= thread.replies.last.author.name %><br>
+            <%= thread.replies.last.created_at.strftime('%d-%m-%Y, %H:%M %P') %>
+          <% end %>
+        </span>
       </div>
   <% end %>
 </div>

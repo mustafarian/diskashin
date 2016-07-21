@@ -1,29 +1,41 @@
 <div class="page-header">
-  <h1><%= @discussion_thread.title %></h1>
+  <h1>
+    <%= best_in_place_if can_edit_object(@discussion_thread), @discussion_thread, :title, :as => :input %>
+  </h1>
 </div>
 
-
+<%= link_to board_path(@discussion_thread.board) do %>
+    <strong><< Back</strong>
+<% end %>
+<br><br>
 <div class="panel panel-default">
   <div class="panel-heading">
     <%= @discussion_thread.author.name %><br>
-    <small><strong>at: </strong><%= @discussion_thread.created_at.strftime('%d-%m-%Y, %H:%M %P') %></small>
+    <small>
+      <strong>Created at: </strong><%= @discussion_thread.created_at.strftime('%d-%m-%Y, %H:%M %P') %>
+      <strong>Edited at: </strong><%= @discussion_thread.updated_at.strftime('%d-%m-%Y, %H:%M %P') %>
+    </small>
   </div>
-  <div class="panel-body"><%= @discussion_thread.body %></div>
+  <div class="panel-body">
+    <%= best_in_place_if can_edit_object(@discussion_thread), @discussion_thread, :body, :as => :textarea %>
+  </div>
 </div>
 
 <% @discussion_thread.replies.each do |post| %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <span><%= post.author.name %></span><br>
-        <strong>at: </strong><span><%= post.created_at.strftime('%d-%m-%Y, %H:%M %P') %></span>
+        <small>
+          <strong>Created at: </strong><span><%= post.created_at.strftime('%d-%m-%Y, %H:%M %P') %></span>
+          <strong>Edited at: </strong><span><%= post.updated_at.strftime('%d-%m-%Y, %H:%M %P') %></span>
+        </small>
       </div>
       <div class="panel-body">
-        <%= post.body %>
+        <%= best_in_place_if can_edit_object(post), post, :body, :url => discussion_thread_post_path(@discussion_thread, post), :as => :textarea  %>
       </div>
     </div>
 <% end %>
 <br>
-<%= render "post_form" %>
-
-<%= link_to 'Edit', edit_discussion_thread_path(@discussion_thread) %> |
-<%= link_to 'Back', board_path(@discussion_thread.board) %>
+<% if current_user %>
+    <%= render "posts/post_form" %>
+<% end %>

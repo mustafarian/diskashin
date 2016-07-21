@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :discussion_threads
+
+  resources :discussion_threads do
+    resources :posts
+  end
+
   resources :boards do
     resources :boards
   end

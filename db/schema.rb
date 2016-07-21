@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720075258) do
+ActiveRecord::Schema.define(version: 20160720115015) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -26,7 +26,19 @@ ActiveRecord::Schema.define(version: 20160720075258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "board_id"
+    t.integer  "author_id"
+    t.index ["author_id"], name: "index_discussion_threads_on_author_id"
     t.index ["board_id"], name: "index_discussion_threads_on_board_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "author_id"
+    t.integer  "thread_id"
+    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["thread_id"], name: "index_posts_on_thread_id"
   end
 
   create_table "users", force: :cascade do |t|

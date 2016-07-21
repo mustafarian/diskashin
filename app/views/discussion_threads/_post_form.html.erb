@@ -1,0 +1,30 @@
+<div class="panel">
+  <%= form_for([@discussion_thread, @post], :html => {:class => 'form-horizontal', :role => "form"}) do |f| %>
+      <% if @post.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@post.errors.count, "error") %> prohibited this discussion_thread from being
+              saved:</h2>
+
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <%= f.text_area :body, rows: 6, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="actions">
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>

@@ -6,10 +6,24 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <%= @discussion_thread.author.name %><br>
-    <small><strong>at: </strong><%= @discussion_thread.created_at.strftime('%d-%m-%Y, %H:%M %P')%></small>
+    <small><strong>at: </strong><%= @discussion_thread.created_at.strftime('%d-%m-%Y, %H:%M %P') %></small>
   </div>
   <div class="panel-body"><%= @discussion_thread.body %></div>
 </div>
+
+<% @discussion_thread.replies.each do |post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span><%= post.author.name %></span><br>
+        <strong>at: </strong><span><%= post.created_at.strftime('%d-%m-%Y, %H:%M %P') %></span>
+      </div>
+      <div class="panel-body">
+        <%= post.body %>
+      </div>
+    </div>
+<% end %>
+<br>
+<%= render "post_form" %>
 
 <%= link_to 'Edit', edit_discussion_thread_path(@discussion_thread) %> |
 <%= link_to 'Back', board_path(@discussion_thread.board) %>

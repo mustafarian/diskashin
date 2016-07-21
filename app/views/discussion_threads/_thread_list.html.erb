@@ -12,7 +12,7 @@
         <span class="col-md-6"><%= link_to "#{thread.title}", discussion_thread_path(thread) %><br>
           <small>Started By: <%= thread.author.name %></small>
         </span>
-        <span class="col-md-2 text-right">Replies: <br>Views:</span>
+        <span class="col-md-2 text-right">Replies: <%= thread.replies.count %><br>Views:</span>
         <span class="col-md-2"></span>
       </div>
   <% end %>

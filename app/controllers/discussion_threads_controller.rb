@@ -11,6 +11,7 @@ class DiscussionThreadsController < ApplicationController
   # GET /discussion_threads/1
   # GET /discussion_threads/1.json
   def show
+    @post = Post.new
   end
 
   # GET /discussion_threads/new
@@ -84,4 +85,5 @@ class DiscussionThreadsController < ApplicationController
   def discussion_thread_update_params
     params.require(:discussion_thread).permit(:title, :body)
   end
+
 end

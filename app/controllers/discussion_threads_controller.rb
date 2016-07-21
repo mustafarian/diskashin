@@ -12,6 +12,12 @@ class DiscussionThreadsController < ApplicationController
   # GET /discussion_threads/1.json
   def show
     @post = Post.new
+
+    if current_user && !@discussion_thread.viewers.include?(current_user)
+      view = @discussion_thread.views.create
+      view.viewer = current_user
+      view.save
+    end
   end
 
   # GET /discussion_threads/new

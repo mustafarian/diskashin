@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720115015) do
+ActiveRecord::Schema.define(version: 20160721065907) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 20160720115015) do
     t.integer  "thread_id"
     t.index ["author_id"], name: "index_posts_on_author_id"
     t.index ["thread_id"], name: "index_posts_on_thread_id"
+  end
+
+  create_table "thread_views", force: :cascade do |t|
+    t.integer  "thread_id"
+    t.integer  "viewer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["thread_id"], name: "index_thread_views_on_thread_id"
+    t.index ["viewer_id", "thread_id"], name: "index_thread_views_on_viewer_id_and_thread_id", unique: true
+    t.index ["viewer_id"], name: "index_thread_views_on_viewer_id"
   end
 
   create_table "users", force: :cascade do |t|

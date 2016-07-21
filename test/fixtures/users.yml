@@ -1,6 +1,5 @@
 ---
 user_1:
-  id: 1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
     utc: &1 2016-07-19 09:35:46.671326000 Z
     zone: &2 !ruby/object:ActiveSupport::TimeZone

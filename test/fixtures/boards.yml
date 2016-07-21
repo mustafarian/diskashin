@@ -1,6 +1,5 @@
 ---
 board_2:
-  id: 2
   title: Car Audio & Electronics sponsored by Bavsound
   description: 'Discuss your car''s electronics; head units, amplifiers, speakers,
     wiring, security, '
@@ -15,7 +14,6 @@ board_2:
     time: *3
   parent_id: 
 board_3:
-  id: 3
   title: Some Interesting Discussion Area
   description: Okay
   created_at: !ruby/object:ActiveSupport::TimeWithZone

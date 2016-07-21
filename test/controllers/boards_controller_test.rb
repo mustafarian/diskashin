@@ -1,23 +1,26 @@
 require 'test_helper'
 
-class BoardsControllerTest < ActionDispatch::IntegrationTest
+class BoardsControllerTest < ActionController::TestCase
   setup do
     @board = boards(:board_2)
+    @user = users(:user_1)
   end
 
   test "should get index" do
-    get boards_url
+    get :index
     assert_response :success
   end
 
   test "should get new" do
-    get new_board_url
+    get :new
     assert_response :success
   end
 
   test "should create board" do
     assert_difference('Board.count') do
-      post boards_url, params: { board: { description: @board.description, title: @board.title } }
+      post :create,
+           params: {board: {description: @board.description, title: @board.title}},
+           session: {user_id: @user.id}
     end
 
     assert_redirected_to board_url(Board.last)
@@ -26,7 +29,9 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
   test "should create sub-board" do
 
     assert_difference('Board.count') do
-      post boards_url, params: { board: { description: "Child board", title: "sub-board", parent_id: @board.id } }
+      post :create,
+           params: {board: {description: "Child board", title: "sub-board", parent_id: @board.id}},
+           session: {user_id: @user.id}
     end
 
     sub_board = Board.find_by(:title => "sub-board")
@@ -36,23 +41,26 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show board" do
-    get board_url(@board)
+    get :show, params: {id: @board.id}
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_board_url(@board)
+    get :edit, params: {id: @board.id}, session: {user_id: @user.id, roles: ["admin"]}
     assert_response :success
   end
 
   test "should update board" do
-    patch board_url(@board), params: { board: { description: @board.description, title: @board.title } }
+    patch :update,
+          params: {id: @board.id, board: {description: @board.description, title: @board.title}},
+          session: {user_id: @user.id}
+
     assert_redirected_to board_url(@board)
   end
 
   test "should destroy board" do
     assert_difference('Board.count', -1) do
-      delete board_url(@board)
+      delete :destroy, params: {id: @board.id}, session: {user_id: @user.id}
     end
 
     assert_redirected_to boards_url

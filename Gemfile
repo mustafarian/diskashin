@@ -56,3 +56,5 @@ gem 'font-awesome-rails'
 gem 'best_in_place', '~> 3.0.1'
 
 gem 'will_paginate', '~> 3.1.0'
+
+gem 'paperclip', '~> 5.0.0'

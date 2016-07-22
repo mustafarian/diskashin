@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>
+    <%= @attachment.caption %>
+  </h1>
+</div>
+<br>
+<div class="panel">
+  <div class="panel-heading">Uploaded on: <%= @attachment.created_at.strftime('%d-%m-%Y, %H:%M %P')%></div>
+  <div class="panel-body">
+    <%= image_tag @attachment.image.url %>
+  </div>
+</div>

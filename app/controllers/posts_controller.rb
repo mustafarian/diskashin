@@ -12,6 +12,15 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+
+        if params[:attachments]
+          params[:attachments].each do |attachment|
+            attached_image = @post.attachments.create(image: attachment)
+            attached_image.save
+            attached_image.errors
+          end
+        end
+
         format.html { redirect_to discussion_thread_url(@discussion_thread), notice: 'Post was successfully added.' }
         format.json { render :show, status: :created, location: @discussion_thread }
       else
@@ -31,11 +40,23 @@ class PostsController < ApplicationController
     end
   end
 
+  def upload_image
+
+  end
+
+  def delete_image
+
+  end
+
+
+  private
   def set_post
     @post = Post.find(params[:id])
   end
 
   def post_params
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:body, :images)
   end
+
+
 end

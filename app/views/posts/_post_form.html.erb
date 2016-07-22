@@ -1,5 +1,6 @@
 <div class="panel">
-  <%= form_for([@discussion_thread, @post], :html => {:class => 'form-horizontal', :role => "form"}) do |f| %>
+  <%= form_for([@discussion_thread, @post],
+               :html => {:class => 'form-horizontal', :role => "form", multipart: true}) do |f| %>
       <% if @post.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@post.errors.count, "error") %> prohibited this discussion_thread from being
@@ -16,6 +17,16 @@
       <div class="form-group">
         <div class="col-sm-10">
           <%= f.text_area :body, rows: 6, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+
+        <%= f.label :images, :class => 'control-label col-sm-2' %>
+        <div class="col-sm-8">
+          <div class="controls">
+            <%= file_field_tag 'attachments[]', type: :file, multiple: true %>
+          </div>
         </div>
       </div>
 

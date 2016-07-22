@@ -21,12 +21,11 @@
       </div>
 
       <div class="form-group">
-
-        <%= f.label :images, :class => 'control-label col-sm-2' %>
+        <div class="col-sm-2 text-right">
+          <%= f.label "Upload Images", :class => 'control-label' %>
+        </div>
         <div class="col-sm-8">
-          <div class="controls">
-            <%= file_field_tag 'attachments[]', type: :file, multiple: true %>
-          </div>
+          <%= file_field_tag 'attachments[]', type: :file, multiple: true, accept: 'image/png,image/gif,image/jpeg' %>
         </div>
       </div>
 

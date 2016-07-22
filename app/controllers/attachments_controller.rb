@@ -15,7 +15,7 @@ class AttachmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
   def set_attachment
     @attachment = Attachment.find(params[:id])

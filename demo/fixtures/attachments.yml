@@ -1,0 +1,142 @@
+---
+attachment_2:
+  id: 2
+  caption: 
+  image_file_name: inpa_values1.png
+  image_content_type: image/png
+  image_file_size: 40830
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-07-22 13:43:05.990619000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  attachable_type: Post
+  attachable_id: 980191003
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-07-22 13:43:06.003638000 Z
+    zone: *2
+    time: *3
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-07-22 13:43:06.003638000 Z
+    zone: *2
+    time: *4
+attachment_3:
+  id: 3
+  caption: 
+  image_file_name: inpa_errors.png
+  image_content_type: image/png
+  image_file_size: 43379
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-07-22 13:43:06.186648000 Z
+    zone: *2
+    time: *5
+  attachable_type: Post
+  attachable_id: 980191003
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-07-22 13:43:06.197559000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-07-22 13:43:06.197559000 Z
+    zone: *2
+    time: *7
+attachment_4:
+  id: 4
+  caption: 
+  image_file_name: inpa_values2.png
+  image_content_type: image/png
+  image_file_size: 53057
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-07-22 13:43:06.555451000 Z
+    zone: *2
+    time: *8
+  attachable_type: Post
+  attachable_id: 980191003
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-07-22 13:43:06.566136000 Z
+    zone: *2
+    time: *9
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2016-07-22 13:43:06.566136000 Z
+    zone: *2
+    time: *10
+attachment_5:
+  id: 5
+  caption: 
+  image_file_name: IMG_20160605_180758809.jpg
+  image_content_type: image/jpeg
+  image_file_size: 1545708
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2016-07-22 13:58:26.664291000 Z
+    zone: *2
+    time: *11
+  attachable_type: Post
+  attachable_id: 980191004
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2016-07-22 13:58:26.682217000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2016-07-22 13:58:26.682217000 Z
+    zone: *2
+    time: *13
+attachment_6:
+  id: 6
+  caption: 
+  image_file_name: inpa_values1.png
+  image_content_type: image/png
+  image_file_size: 40830
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2016-07-22 14:12:12.822591000 Z
+    zone: *2
+    time: *14
+  attachable_type: Post
+  attachable_id: 980191005
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2016-07-22 14:12:12.832711000 Z
+    zone: *2
+    time: *15
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2016-07-22 14:12:12.832711000 Z
+    zone: *2
+    time: *16
+attachment_7:
+  id: 7
+  caption: 
+  image_file_name: inpa_errors.png
+  image_content_type: image/png
+  image_file_size: 43379
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2016-07-22 14:12:13.035900000 Z
+    zone: *2
+    time: *17
+  attachable_type: Post
+  attachable_id: 980191005
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2016-07-22 14:12:13.048541000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2016-07-22 14:12:13.048541000 Z
+    zone: *2
+    time: *19
+attachment_8:
+  id: 8
+  caption: 
+  image_file_name: inpa_values2.png
+  image_content_type: image/png
+  image_file_size: 53057
+  image_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2016-07-22 14:12:13.222748000 Z
+    zone: *2
+    time: *20
+  attachable_type: Post
+  attachable_id: 980191005
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2016-07-22 14:12:13.233880000 Z
+    zone: *2
+    time: *21
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2016-07-22 14:12:13.233880000 Z
+    zone: *2
+    time: *22

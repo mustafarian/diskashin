@@ -1,0 +1,50 @@
+---
+threadview_1:
+  id: 1
+  thread_id: 980190980
+  viewer_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-07-22 13:18:45.310600000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-07-22 13:18:45.310600000 Z
+    zone: *2
+    time: *3
+threadview_2:
+  id: 2
+  thread_id: 980190972
+  viewer_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-07-22 13:57:51.877029000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-07-22 13:57:51.877029000 Z
+    zone: *2
+    time: *5
+threadview_3:
+  id: 3
+  thread_id: 980190972
+  viewer_id: 2
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-07-22 14:01:05.473917000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-07-22 14:01:05.473917000 Z
+    zone: *2
+    time: *7
+threadview_4:
+  id: 4
+  thread_id: 980190978
+  viewer_id: 2
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-07-22 14:04:59.841316000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-07-22 14:04:59.841316000 Z
+    zone: *2
+    time: *9

@@ -26,7 +26,7 @@ namespace :db do
       models = selected_models || all_models
 
       models.each do |model|
-        file_name = "#{Rails.root}/test/fixtures/#{model.name.downcase.pluralize}.yml"
+        file_name = "#{Rails.root}/demo/fixtures/#{model.name.downcase.pluralize}.yml"
 
         puts "Dumping: #{model.name} => #{file_name}"
 

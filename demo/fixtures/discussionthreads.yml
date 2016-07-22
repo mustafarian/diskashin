@@ -1,0 +1,364 @@
+---
+discussionthread_298486374:
+  id: 298486374
+  title: MyString
+  body: MyText
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-07-20 12:05:14.422257000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-07-20 12:05:14.422257000 Z
+    zone: *2
+    time: *3
+  board_id: 2
+  author_id: 
+discussionthread_980190962:
+  id: 980190962
+  title: MyString
+  body: MyText
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-07-20 12:05:14.422257000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-07-20 12:05:14.422257000 Z
+    zone: *2
+    time: *5
+  board_id: 2
+  author_id: 
+discussionthread_980190963:
+  id: 980190963
+  title: This is a cool thread
+  body: 'Sometimes, you have a resource that clients always look up without referencing
+    an ID. For example, you would like /profile to always show the profile of the
+    currently logged in user. In this case, you can use a singular resource to map
+    /profile (rather than /profile/:id) to the show action:'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-07-20 12:05:51.846383000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-07-21 17:34:53.176519000 Z
+    zone: *2
+    time: *7
+  board_id: 13
+  author_id: 1
+discussionthread_980190964:
+  id: 980190964
+  title: Did you guys see this car on Ebay?! Sold..very nice Euro M5 low miles..
+  body: "I wonder where this baby is going to end up \r\n\r\nhttp://www.ebay.com/itm/1991-BMW-M5-...ht_1523wt_1362"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-07-20 12:21:19.518928000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-07-20 12:21:19.518928000 Z
+    zone: *2
+    time: *9
+  board_id: 15
+  author_id: 1
+discussionthread_980190965:
+  id: 980190965
+  title: Does a aftermarket cone filter make a difference on an M30?
+  body: "I've been contemplating adding a cone filter onto my M30 535i and was wondering
+    if you have opinions on whether this is even worth the effort? \r\n\r\nAlso, does
+    the M30 air flow meter/motronic adjust the mixture for inlet air temperature?
+    \r\n\r\nSent from my Nexus 7 using Tapatalk"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2016-07-20 12:27:41.392768000 Z
+    zone: *2
+    time: *10
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2016-07-20 12:27:41.392768000 Z
+    zone: *2
+    time: *11
+  board_id: 15
+  author_id: 1
+discussionthread_980190966:
+  id: 980190966
+  title: Euro Headlight Adjustment Switch and Motor
+  body: I purchased these Euro Headlights not knowing what i was getting into... apparently
+    they have an adjustment motor i wasn't aware of. I have all the switches and plugs,
+    but for the life of me i cant figure out how to wire it. I have an american model
+    1992 e34 so i'm thinking it wouldn't have the wires already. Can anybody shed
+    some light on this?
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2016-07-20 12:30:17.414877000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2016-07-20 12:30:17.414877000 Z
+    zone: *2
+    time: *13
+  board_id: 15
+  author_id: 1
+discussionthread_980190967:
+  id: 980190967
+  title: Dealing with an EWS issue and a prior bodge Parts or advice needed
+  body: "EDIT; FIXED, see post #5\r\n'95 525it, M50 automatic, EWSII\r\nCranking but
+    no start, no fuel, no spark. Car ran fine when last parked. Smells like a failed
+    crank sensor so I replace it, no joy.\r\nDigging further I am suspecting an EWS
+    issue but EWSII is supposed to disable the starter too. \r\nSomeone's been in
+    here before, a jumper is connected to bypass the starter inhibit, this is why
+    she cranked and I'm out the price of a CPS.\r\nI've decided to eliminate the EWS
+    since I have no idea what the previous issues were(probably misaligned modules)and
+    am not able to code or diagnose modules.\r\nSO, it's my understanding EWSII is
+    only eliminated with either re-coding(out), an EWS delete chip(too$$) or using
+    the earlier red label DME and perhaps snipping one wire(#66) to deafen the DME
+    from any EWSI signal.\r\nIf anyone knows another way around, has the proper DME(IE
+    red label 413) or chip to sell please speak up or PM.\r\n\r\nThanks all,\r\nRoss"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2016-07-20 12:37:16.688523000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2016-07-20 12:37:16.688523000 Z
+    zone: *2
+    time: *15
+  board_id: 15
+  author_id: 1
+discussionthread_980190968:
+  id: 980190968
+  title: title
+  body: body
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2016-07-20 13:13:28.606262000 Z
+    zone: *2
+    time: *16
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2016-07-20 13:13:28.606262000 Z
+    zone: *2
+    time: *17
+  board_id: 2
+  author_id: 1
+discussionthread_980190969:
+  id: 980190969
+  title: title
+  body: body
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2016-07-20 13:13:50.511350000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2016-07-20 13:13:50.511350000 Z
+    zone: *2
+    time: *19
+  board_id: 2
+  author_id: 1
+discussionthread_980190970:
+  id: 980190970
+  title: Did you guys see this car on Ebay?!..very nice Euro M5 low miles..
+  body: 17x8.5et13 with 235/45 tires fit no problem. A 17x8et10 would be inside the
+    envelope of an 8.5et13, it will work no problem. I could easy go with a 245/40
+    tire if I deemed the extra width necessary. I did run 20mm spacers in the rear
+    which did require some fender massaging.
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2016-07-20 13:49:28.544695000 Z
+    zone: *2
+    time: *20
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2016-07-21 15:45:43.709745000 Z
+    zone: *2
+    time: *21
+  board_id: 13
+  author_id: 1
+discussionthread_980190971:
+  id: 980190971
+  title: Did you guys see this car on Ebay?! Sold..very nice Euro M5 low miles..
+  body: "FIXED, see post #5\n'95 525it, M50 automatic, EWSII\nCranking but no start,
+    no fuel, no spark. Car ran fine when last parked. Smells like a failed crank sensor
+    so I replace it, no joy.\nDigging further I am suspecting an EWS issue but EWSII
+    is supposed to disable the starter too. \nSomeone's been in here before, a jumper
+    is connected to bypass the starter inhibit, this is why she cranked and I'm out
+    the price of a CPS.\nI've decided to eliminate the EWS since I have no idea what
+    the previous issues were(probably misaligned modules)and am not able to code or
+    diagnose modules.\nSO, it's my understanding EWSII is only eliminated with either
+    re-coding(out), an EWS delete chip(too$$) or using the earlier red label DME and
+    perhaps snipping one wire(#66) to deafen the DME from any EWSI signal.\nIf anyone
+    knows another way around, has the proper DME(IE red label 413) or chip to sell
+    please speak up or PM.\n\nThanks all,\nRoss\n\nwow!\n\n\nIs this cool or what?!!!"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2016-07-20 13:50:33.975443000 Z
+    zone: *2
+    time: *22
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2016-07-21 17:34:11.777988000 Z
+    zone: *2
+    time: *23
+  board_id: 13
+  author_id: 1
+discussionthread_980190972:
+  id: 980190972
+  title: Mirrors not adjusting - new seats to blame?
+  body: I just changed over to a Sport Seat on the drivers side (testing it before
+    i have both sides redone) and noticed that my mirrors no longer adjusted. I checked
+    the fuses and they are all good. is there something I am missing in the connections
+    under the seat that needs to be pinned or fixed? The std seat I had had memory
+    as does the new sport seat. All other options are there with the exception of
+    lumbar support which the sport seat does not have. Any help is appreciated.
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2016-07-21 15:36:16.039684000 Z
+    zone: *2
+    time: *24
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2016-07-22 13:58:26.690910000 Z
+    zone: *2
+    time: *25
+  board_id: 13
+  author_id: 2
+discussionthread_980190973:
+  id: 980190973
+  title: 5 Series (E12, E28, E34, E39, E60, E61)
+  body: From the very beginning the 5 Series has had cutting edge styling with leading
+    edge performance. Comfortable on a plush drive, or capable in a performance setting,
+    the 5 Series has always done it all. From the Sedan, to the Touring, to the Beast
+    known as the ///M5, there is a reason that 5 Series owners are the most steadfast
+    enthusiasts of the brand.
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2016-07-21 22:17:28.688768000 Z
+    zone: *2
+    time: *26
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2016-07-21 22:17:28.688768000 Z
+    zone: *2
+    time: *27
+  board_id: 16
+  author_id: 1
+discussionthread_980190974:
+  id: 980190974
+  title: So that the "What did you do to your E34 today?" thread may never die..
+  body: "I've started a new one, with the blessings of the almighty mods (all praise
+    be upon them, and may their oil forever run clean). \r\n\r\nI noticed my drip
+    is a little more...motivated than I first thought. So I'll have to address this
+    oil pan thing sooner rather than later. I suppose I should order a new seal for
+    the pan, in case I need to remove it to get the bolt out. And a vampire pump to
+    remove the oil. Oy vey.\r\n"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2016-07-22 08:57:20.766500000 Z
+    zone: *2
+    time: *28
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2016-07-22 08:57:20.766500000 Z
+    zone: *2
+    time: *29
+  board_id: 13
+  author_id: 2
+discussionthread_980190975:
+  id: 980190975
+  title: Can you remove the water pump with the fan/clutch attached? (M50)
+  body: "Been struggling this weekend with removing my fan clutch, the nut is like
+    welded on, ive done all the tricks in the book. screwdriver wedge, jamming the
+    belt with a wrench, hammering my 32mm long wrench as hard as i can standing over
+    the engine bay, fluids. Anyway, i was gonna replace my fan clutch and waterpump
+    anyway so can you remove the pump with the clutch still on, is there enough space
+    for it?\r\n"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2016-07-22 08:58:11.111014000 Z
+    zone: *2
+    time: *30
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2016-07-22 08:58:11.111014000 Z
+    zone: *2
+    time: *31
+  board_id: 13
+  author_id: 2
+discussionthread_980190976:
+  id: 980190976
+  title: Parting a 740i 1994 (has e34 parts)
+  body: "HI I am parting an auto e32 740. It has a nice black interior. If you need
+    something (Front seats, head rests, rear arm rest) let me know\r\n\r\n\r\nAndy"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2016-07-22 08:59:11.036233000 Z
+    zone: *2
+    time: *32
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2016-07-22 08:59:11.036233000 Z
+    zone: *2
+    time: *33
+  board_id: 13
+  author_id: 2
+discussionthread_980190977:
+  id: 980190977
+  title: 'FS: Redfive''s Turbo M30 - entire setup (radiator to driveshaft)'
+  body: "After 10 years with this engine, I’m ready to move on to something else.
+    Normally, people would just sell the car, but I don't feel I'll get nearly enough
+    for it. Plus what I want to do next allows me to reuse the rest of my car. (if
+    you want the whole car, I'll sell it for $25k - Turbo engine, D-force wheels,
+    new interior, BBK, GC coil overs and all the other goodies but not the ACS widebody
+    setup or Speedline Wheels)\r\nThe engine is currently in the car and is available
+    for test drive. Removal will take approximately 1-2 weeks and will require some
+    notice. My total cost of this build is over $35,000 and nearly all of the issues
+    have been resolved. The setup could use some more tuning to eliminate some minor
+    holes in the map and to improve driveability (as a DD) or if you want more power.
+    It currently has over 30 hours of tuning (I let the tuner use the car as a daily
+    for several weeks).\r\nEngine was producing 280 rwhp and 350 rwtq at just 8 psi
+    when tuned. The setup now runs 15psi. Figure on approximately 400rwhp in current
+    tune. The setup is well sorted and is 98% there. I do not have a dyno chart for
+    this configuration.\r\n\r\nI’m selling it because it doesn’t suit how the car
+    is driven now. For the longest time my car was a track car used occasionally on
+    the street. It was used in my 2011 One Lap of America adventure and it wasn’t
+    fully sorted at the time. The issues that occurred during the race have been resolved
+    and are no longer an issue. My life situation has changed (2 kids, 2 dogs, a wife
+    and a good sized house) and a track car doesn’t get driven much. (Crazy to think
+    that when I started this I had a girlfriend, a dog, and a small house) I've converted
+    my car to street spec, so it gets used more. I also have a desire to go back to
+    a naturally aspirated engine."
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2016-07-22 09:02:05.570007000 Z
+    zone: *2
+    time: *34
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2016-07-22 09:02:05.570007000 Z
+    zone: *2
+    time: *35
+  board_id: 13
+  author_id: 2
+discussionthread_980190978:
+  id: 980190978
+  title: Need ECU for 1989 535i manual
+  body: Looking for a working ECU for my 1989 535i manual transmission. Anyone?? Not
+    able to find one.
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2016-07-22 09:08:26.485490000 Z
+    zone: *2
+    time: *36
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2016-07-22 14:12:43.374256000 Z
+    zone: *2
+    time: *37
+  board_id: 13
+  author_id: 2
+discussionthread_980190979:
+  id: 980190979
+  title: 'WTB: Shadow line ShadowLine Shadow Shadow Line Trim, trimmy trim...'
+  body: "Anyone got any to sell? I don't mind getting it new, albeit A couple part
+    numbers are NLA. I'll take any and all, new or used. My car is ready for paint
+    and the desire for shadow line is holding it up.\r\n\r\nthx,\r\n\r\nLain"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2016-07-22 09:09:15.013800000 Z
+    zone: *2
+    time: *38
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2016-07-22 09:09:15.013800000 Z
+    zone: *2
+    time: *39
+  board_id: 13
+  author_id: 2
+discussionthread_980190980:
+  id: 980190980
+  title: 'FS: Floor Mats, Script, Service light Reset, CD Magazine'
+  body: "I am selling a few parts left from my (gone now) E34 Touring. Prices are
+    shipped.\r\n\r\n\r\n2. Rear \"Touring\" Script...from a Sebring..new - $30\r\n\r\n3.
+    CD Changer Magazine - $18\r\n\r\n4. R5 Reset Tool - $30\r\n\r\nPics......."
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2016-07-22 09:10:39.259809000 Z
+    zone: *2
+    time: *40
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2016-07-22 13:43:06.572686000 Z
+    zone: *2
+    time: *41
+  board_id: 13
+  author_id: 2

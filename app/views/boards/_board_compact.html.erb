@@ -2,6 +2,7 @@
   <span class="fa fa-comments"></span>
   &nbsp;
   <%= link_to(board) do %>
-   <% board.title %>
+   <%= board.title %>
   <% end %>
+  &nbsp;(<%= board.total_thread_count %>/<%= board.total_post_count %>)
 </span>

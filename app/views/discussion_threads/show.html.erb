@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<% @discussion_thread.replies.each do |post| %>
+<% @replies.each do |post| %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <span><%= post.author.name %></span><br>
@@ -35,6 +35,8 @@
       </div>
     </div>
 <% end %>
+<br>
+<%= will_paginate @replies %>
 <br>
 <% if current_user %>
     <%= render "posts/post_form" %>

@@ -5,12 +5,13 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.where(parent_id: nil)
+    @boards = Board.where(parent_id: nil).paginate(page: params[:page], per_page: 10).order("title ASC")
   end
 
   # GET /boards/1
   # GET /boards/1.json
   def show
+    @threads = @board.threads.paginate(:page => params[:page], :per_page => 10).order("updated_at DESC")
   end
 
   # GET /boards/new

@@ -2,16 +2,11 @@ class DiscussionThreadsController < ApplicationController
   before_action :set_discussion_thread, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
-  # GET /discussion_threads
-  # GET /discussion_threads.json
-  def index
-    @discussion_threads = DiscussionThread.all
-  end
-
   # GET /discussion_threads/1
   # GET /discussion_threads/1.json
   def show
     @post = Post.new
+    @replies = @discussion_thread.replies.paginate(:page => params[:page], :per_page => 10).order("created_at ASC")
 
     if current_user && !@discussion_thread.viewers.include?(current_user)
       view = @discussion_thread.views.create

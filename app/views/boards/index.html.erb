@@ -4,8 +4,8 @@
   <div class="list-group-item row">
     <span class="col-md-1"></span>
     <span class="col-md-6"><strong>Board</strong></span>
-    <span class="col-md-2"><strong>Threads/Posts</strong></span>
-    <span class="col-md-2"><strong>Last Post</strong></span>
+    <span class="col-md-2 text-right"><strong>Threads/Posts</strong></span>
+    <span class="col-md-2 text-right"><strong>Last Post</strong></span>
     <% if has_role? 'admin' %>
             <span class="col-md-1 pull-right">
               <strong>Actions</strong>
@@ -26,6 +26,10 @@
             <% end %>
           </div>
         </span>
+        <span class="col-md-2 text-right">
+          <div class="text-right">Threads: <%= board.total_thread_count %> </div>
+          <div class="text-right">Posts: <%= board.total_post_count %></div>
+        </span>
         <% if has_role? 'admin' %>
             <span class="col-md-1 pull-right">
               <%= link_to 'Edit', edit_board_path(board) %>
@@ -35,7 +39,8 @@
       </div>
   <% end %>
 </div>
-
+<br>
+<%= will_paginate @boards %>
 <br>
 
 <% if has_role? 'admin' %>

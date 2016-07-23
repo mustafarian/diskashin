@@ -3,8 +3,8 @@
     <% unless attachments.empty? %>
         <% attachments.each do |attachment| %>
                     <span class="span3" id="attachment_<%= attachment.id %>">
-                      <div class="thumbnail col-md-3">
-                        <%= image_tag attachment.image.url %>
+                      <div class="col-md-3">
+                        <%= image_tag attachment.image.url, class: "thumbnail" %>
                         <div class="caption">
                           <p style="text-align: center;">
                             <%= link_to "View", attachment_url(attachment) %>

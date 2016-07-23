@@ -25,8 +25,8 @@
           </div>
         </span>
         <span class="col-md-2 text-right">
-          <div class="text-right">Threads: <%= board.total_thread_count %> </div>
-          <div class="text-right">Posts: <%= board.total_post_count %></div>
+          <div class="text-right">Threads: <%= board.thread_count %> </div>
+          <div class="text-right">Posts: <%= board.post_count %></div>
         </span>
         <span class="col-md-2 text-right"></span>
         <% if has_role? 'admin' %>

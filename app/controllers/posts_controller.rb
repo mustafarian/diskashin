@@ -40,15 +40,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def upload_image
-
-  end
-
-  def delete_image
-
-  end
-
-
   private
   def set_post
     @post = Post.find(params[:id])
@@ -57,6 +48,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:body, :images)
   end
-
-
 end

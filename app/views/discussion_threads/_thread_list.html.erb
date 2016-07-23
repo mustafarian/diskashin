@@ -13,11 +13,11 @@
           <small>Started By: <%= thread.author.name %></small>
         </span>
         <span class="col-md-2 text-right">
-          <div class="text-righ">Replies: <%= thread.replies.count %> </div>
-          <div class="text-right">Views: <%= thread.views.count %></div>
+          <div class="text-righ">Replies: <%= thread.post_count %> </div>
+          <div class="text-right">Views: <%= thread.view_count %></div>
         </span>
         <span class="col-md-2 pull-right">
-          <% if thread.replies.count > 0 %>
+          <% if thread.post_count > 0 %>
             <%= thread.replies.last.author.name %><br>
             <%= thread.replies.last.created_at.strftime('%d-%m-%Y, %H:%M %P') %>
           <% end %>

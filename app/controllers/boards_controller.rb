@@ -5,7 +5,9 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.where(parent_id: nil).paginate(page: params[:page], per_page: 10).order("title ASC")
+    @boards = Board.where(parent_id: nil)
+                  .paginate(page: params[:page], per_page: 10)
+                  .order("title ASC")
   end
 
   # GET /boards/1

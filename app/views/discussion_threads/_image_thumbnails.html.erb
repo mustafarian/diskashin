@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="thumbnails files">
+    <% unless attachments.empty? %>
+        <% attachments.each do |attachment| %>
+                    <span class="span3" id="attachment_<%= attachment.id %>">
+                      <div class="thumbnail col-md-3">
+                        <%= image_tag attachment.image.url %>
+                        <div class="caption">
+                          <p style="text-align: center;">
+                            <%= link_to "View", attachment_url(attachment) %>
+                            &nbsp;
+                            <% if can_edit_object(attachment.attachable) %>
+                              <%= link_to "Delete", attachment,
+                                          :data => {:confirm => "Are you sure?"},
+                                          :method => :delete %>
+                            <% end %>
+                          </p>
+                        </div>
+                      </div>
+                    </span>
+        <% end %>
+    <% end %>
+  </div>
+</div>

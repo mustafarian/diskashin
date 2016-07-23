@@ -17,7 +17,6 @@ class PostsController < ApplicationController
           params[:attachments].each do |attachment|
             attached_image = @post.attachments.create(image: attachment)
             attached_image.save
-            attached_image.errors
           end
         end
 

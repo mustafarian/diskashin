@@ -10,6 +10,8 @@ class DiscussionThread < ApplicationRecord
 
   has_many :viewers, class_name: 'User', :through => :views
 
+  has_many :attachments, as: :attachable, :dependent => :destroy
+
   def post_count
     Rails.cache.fetch [self, "post_count"] do
       replies.count

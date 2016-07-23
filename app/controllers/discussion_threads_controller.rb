@@ -34,6 +34,14 @@ class DiscussionThreadsController < ApplicationController
     @discussion_thread.author = current_user
     respond_to do |format|
       if @discussion_thread.save
+
+        if params[:attachments]
+          params[:attachments].each do |attachment|
+            attached_image = @discussion_thread.attachments.create(image: attachment)
+            attached_image.save
+          end
+        end
+
         format.html { redirect_to discussion_thread_url(@discussion_thread),
                                   notice: 'Discussion thread was successfully created.' }
         format.json { render :show, status: :created, location: @discussion_thread }
